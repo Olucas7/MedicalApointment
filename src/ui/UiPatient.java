@@ -17,7 +17,7 @@ public class UiPatient {
 
             System.out.println("1. Book an appoinment");
             System.out.println("2. My appointment");
-            System.out.println("0. Logout");
+            System.out.println("0. Logout ");
 
             Scanner sc = new Scanner(System.in);
             response = Integer.parseInt(sc.nextLine());
