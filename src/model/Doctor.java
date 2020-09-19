@@ -81,9 +81,9 @@ public class Doctor extends User {
         @Override
         public String toString() {
             return
-                    "\nid_Appointment=" + id +
-                            "\ndate=" + date +
-                            "\ntime='" + time+"\n";
+                    "\n id_Appointment = " + id +
+                            "\n date = " + format.format(date) +
+                            "\n time = " + time+"\n";
         }
     }
 

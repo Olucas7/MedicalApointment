@@ -24,6 +24,8 @@ public class UiDoctorMenu {
                     showAddAvailableAppointmentMenu();
                     break;
                 case 2:
+                    response =0;
+                    showMyAvailableAppointment();
                     break;
                 case 0:
                     UiMenu.showMenu();
@@ -54,9 +56,9 @@ public class UiDoctorMenu {
                 String date = sc.nextLine();
                 System.out.println("You date is: " + date + "\n1. Correct \n2. Change Date");
                 int responseDate = Integer.parseInt(sc.nextLine());
-                if (response == 2) continue;
+                if (responseDate == 2) continue;
                 //Time
-                int responseTime = 2;
+                int responseTime = 0;
                 String time = "";
                 do {
                     System.out.printf("Insert the time available for date %s [16:00]\n", date);
@@ -77,5 +79,10 @@ public class UiDoctorMenu {
         if(doctor.getAvailableAppointments().size()> 0 && !doctorsAvailableAppointments.contains(doctor)){
             doctorsAvailableAppointments.add(doctor);
         }
+    }
+
+    private static void showMyAvailableAppointment(){
+        System.out.println(UiMenu.doctorLogged.getAvailableAppointments());
+        showDoctorMenu();
     }
 }
